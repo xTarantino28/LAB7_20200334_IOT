@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
                         Log.d("msg-test", "Display name: " + user.getDisplayName());
                         Log.d("msg-test", "Email: " + user.getEmail());
 
-
+                        //no verificar para correos inexistentes
                         user.reload().addOnCompleteListener(task -> {
                             if (user.isEmailVerified()) {
                                 goToMainActivity();
